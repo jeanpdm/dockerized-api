@@ -4,7 +4,7 @@ API REST simples de consulta de pedidos, **containerizada com Docker** e com man
 
 ## Objetivo
 
-Demonstrar empacotamento de uma aplicação em container, com boas práticas básicas: imagem enxuta, health check e configuração de orquestração.
+Mostrar empacotamento de uma aplicação em container, com boas práticas: imagem enxuta, health check e configuração de orquestração.
 
 ## Endpoints
 
@@ -21,12 +21,6 @@ docker build -t pedidos-api .
 docker run -p 5000:5000 pedidos-api
 ```
 
-Ou com Docker Compose:
-
-```bash
-docker-compose up --build
-```
-
 Testar:
 
 ```bash
@@ -34,7 +28,7 @@ curl http://localhost:5000/health
 curl http://localhost:5000/pedidos/PED-00001
 ```
 
-## Como rodar com Kubernetes (opcional, via minikube/kind)
+## Como rodar com Kubernetes 
 
 ```bash
 minikube start
